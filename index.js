@@ -7,14 +7,24 @@ const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers, GatewayIntentBits.DirectMessages],
 });
 
-client.login(process.env.DISCORD_TOKEN);
-
 client.on("messageCreate", async message => {
   console.log(message);
 
   if (message.content === "bjuds det?") {
-    message.channel.send("Jadå!");
+    message.channel.send("Jadå! 1");
   } else {
-    message.channel.send("Najj!");
+    message.channel.send("Najj! 1");
   }
 });
+
+client.on("message", async message => {
+  console.log(message);
+
+  if (message.content === "bjuds det?") {
+    message.channel.send("Jadå! 2");
+  } else {
+    message.channel.send("Najj! 2");
+  }
+});
+
+client.login(process.env.DISCORD_TOKEN);
