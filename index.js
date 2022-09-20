@@ -43,6 +43,13 @@ client.on("messageCreate", async message => {
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
+  client.user.setPresence({
+    status: "online",
+    activity: {
+      name: "with my code",
+      type: "WATCHING",
+    },
+  });
 });
 
 client.login(process.env.DISCORD_TOKEN);
