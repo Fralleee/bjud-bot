@@ -18,9 +18,3 @@ client.on("messageCreate", async message => {
     message.author.send("???");
   }
 });
-
-// bjud
-
-// bjudsdet
-
-//

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "bjkud-bot",
+  "name": "bjud-bot",
   "builds": [
     {
       "src": "index.js",
