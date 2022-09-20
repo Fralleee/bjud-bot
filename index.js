@@ -17,14 +17,8 @@ client.on("messageCreate", async message => {
   }
 });
 
-client.on("message", async message => {
-  console.log(message);
-
-  if (message.content === "bjuds det?") {
-    message.channel.send("Jadå! 2");
-  } else {
-    message.channel.send("Najj! 2");
-  }
+client.on("ready", () => {
+  console.log(`Logged in as ${client.user.tag}!`);
 });
 
 client.login(process.env.DISCORD_TOKEN);
