@@ -9,20 +9,18 @@ const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers, GatewayIntentBits.DirectMessages, GatewayIntentBits.MessageContent],
 });
 
+const matchers = [gameMatching, wordMatching];
+
 client.on("messageCreate", async message => {
   if (message.author.bot) return;
 
   const content = message.content.toLowerCase();
-  const game = gameMatching(content);
-  if (game) {
-    message.channel.send(game);
-    return;
-  }
-
-  const word = wordMatching(content);
-  if (word) {
-    message.channel.send(word);
-    return;
+  for (const matcher of matchers) {
+    const result = matcher(content);
+    if (result) {
+      message.channel.send(result);
+      return;
+    }
   }
 });
 
