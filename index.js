@@ -3,7 +3,7 @@ dotenv.config();
 
 import { Client, GatewayIntentBits } from "discord.js";
 
-import { gameMatching } from "./game";
+import { gameMatching } from "../game";
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers, GatewayIntentBits.DirectMessages, GatewayIntentBits.MessageContent],
