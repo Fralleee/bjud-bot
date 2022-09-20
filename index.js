@@ -33,10 +33,10 @@ const client = new Client({
 
 client.on("messageCreate", async message => {
   if (message.author.bot) return;
-  if (message.content === "bjuds det?") {
-    message.channel.send("Jadå! 1");
+  if (message.content.includes("bjuds det") || message.content.includes("om det bjuds")) {
+    message.channel.send("Klart det bjuds");
   } else {
-    message.channel.send("Najj! 1");
+    message.channel.send("Nej");
   }
 });
 
