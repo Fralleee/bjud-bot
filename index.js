@@ -9,8 +9,11 @@ const client = new Client({
 
 client.on("messageCreate", async message => {
   if (message.author.bot) return;
-  if (message.content.includes("bjuds det") || message.content.includes("om det bjuds")) {
+  const content = message.content.toLowerCase();
+  if (content.includes("bjuds det") || content.includes("om det bjuds")) {
     message.channel.send("Klart det bjuds");
+  } else if (content.includes("öl")) {
+    message.channel.send("Gärna, om det bjuds.");
   }
 });
 
