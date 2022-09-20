@@ -1,20 +1,21 @@
-const games = ["overwatch", "valorant", "apex"];
+const responseMap = {
+  "!": {
+    overwatch: "@everyone dags för OVERWATCH!!! Woooohoo.. tagga!!",
+    valorant: "Säker? Inte OW då?",
+    apex: "Är det Majk som gnäller? Aja, @everyone vi kör APEX nu.",
+  },
+  "?": {
+    overwatch: "@everyone någon som är sugen på OW?",
+    valorant: "Ingen vill spela det.",
+    apex: "@everyone har vi några huggare för APEX?",
+  },
+};
 
 export function gameMatching(content) {
-  if (content.startsWith("!")) return exclamateGame(content);
-  else if (content.startsWith("?")) return askGame(content);
-}
-
-function exclamateGame(content) {
-  const keyword = content.split("!")[1];
-  if (games.includes(keyword)) {
-    return `@everyone dags för ${keywrod}!!! Tagga!`;
-  }
-}
-
-function askGame(content) {
-  const keyword = content.split("?")[1];
-  if (games.includes(keyword)) {
-    return `@everyone någon som är på ${keywrod}?`;
+  const action = content[0];
+  if (action in responseMap) {
+    const actionResponse = responseMap[action];
+    const game = content.split(/[?!]/)[1];
+    return actionResponse[game];
   }
 }
