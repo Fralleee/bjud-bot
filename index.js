@@ -11,4 +11,14 @@ client.login(process.env.DISCORD_TOKEN);
 
 client.on("messageCreate", async message => {
   console.log(message);
+
+  if (message.content === "bjuds det?") {
+    message.author.send("Jadå!");
+  }
 });
+
+// bjud
+
+// bjudsdet
+
+//
