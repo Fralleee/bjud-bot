@@ -32,14 +32,13 @@ const client = new Client({
 });
 
 client.on("messageCreate", async message => {
+  console.log(message.content);
   if (message.author.bot) return;
   if (message.content.includes("bjuds det") || message.content.includes("om det bjuds")) {
     message.channel.send("Klart det bjuds");
   } else {
     message.channel.send("Nej");
   }
-
-  console.log(message.content);
 });
 
 client.on("ready", () => {
