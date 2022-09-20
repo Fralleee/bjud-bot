@@ -38,6 +38,8 @@ client.on("messageCreate", async message => {
   } else {
     message.channel.send("Nej");
   }
+
+  console.log(message.content);
 });
 
 client.on("ready", () => {
