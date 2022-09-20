@@ -13,8 +13,8 @@ client.on("messageCreate", async message => {
   console.log(message);
 
   if (message.content === "bjuds det?") {
-    message.author.send("Jadå!");
+    message.channel.send("Jadå!");
   } else {
-    message.author.send("???");
+    message.channel.send("Najj!");
   }
 });
