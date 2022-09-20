@@ -32,8 +32,7 @@ const client = new Client({
 });
 
 client.on("messageCreate", async message => {
-  console.log(message);
-
+  if (message.author.bot) return;
   if (message.content === "bjuds det?") {
     message.channel.send("Jadå! 1");
   } else {
