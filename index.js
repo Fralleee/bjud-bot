@@ -32,6 +32,7 @@ const client = new Client({
 });
 
 client.on("messageCreate", async message => {
+  console.log(message);
   console.log(`Message content: ${message.content}`);
   if (message.author.bot) return;
   if (message.content.includes("bjuds")) {
