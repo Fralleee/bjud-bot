@@ -14,6 +14,8 @@ client.on("messageCreate", async message => {
 
   if (message.content === "bjuds det?") {
     message.author.send("Jadå!");
+  } else {
+    message.author.send("???");
   }
 });
 
