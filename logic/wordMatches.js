@@ -23,7 +23,7 @@ export function wordMatches(content) {
 
   if (content.includes("värsåsjönna")) return "VärsåsJönna <3";
   if (content.includes("majk-style"))
-    return "#Majk Style#\n*Se även: lat, soffpotatis, alkoholist* \n*(Uttal IPA: /maɪkstaɪl/)* \nHandlingen där datorspelaren hämtar **två** öl istället för **en**.";
+    return "**Majk Style**\n*Se även: lat, soffpotatis, alkoholist* \n*(Uttal IPA: /maɪkstaɪl/)* \nHandlingen där datorspelaren hämtar __två__ öl istället för __en__.";
   if (content === "spel?") return "Dans!";
   if (content === "dans?") return "Spel!";
 }
