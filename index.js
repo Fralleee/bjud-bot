@@ -8,7 +8,7 @@ import { targetedMessage } from "./targeted.js";
 dotenv.config();
 
 const client = new Client({
-  intents: [GatewayIntentBits.MessageContent],
+  intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers, GatewayIntentBits.DirectMessages, GatewayIntentBits.MessageContent],
 });
 
 const matchers = [gameMatching, wordMatching, pleaseNoMatching];
