@@ -13,6 +13,7 @@ const matchers = [gameMatching, wordMatching];
 
 client.on("messageCreate", async message => {
   if (message.author.bot) return;
+  console.log(message);
 
   const content = message.content.toLowerCase();
   for (const matcher of matchers) {
