@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import { Client, GatewayIntentBits } from "discord.js";
 import { gameMatching } from "./game.js";
 import { wordMatching } from "./word.js";
+import { pleaseNoMatching } from "./pleaseno.js";
 import { targetedMessage } from "./targeted.js";
 
 dotenv.config();
@@ -10,7 +11,7 @@ const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers, GatewayIntentBits.DirectMessages, GatewayIntentBits.MessageContent],
 });
 
-const matchers = [gameMatching, wordMatching];
+const matchers = [gameMatching, wordMatching, pleaseNoMatching];
 
 client.on("messageCreate", async message => {
   if (message.author.bot) return;
@@ -24,9 +25,9 @@ client.on("messageCreate", async message => {
     }
   }
 
-  const message = targetedMessage(message);
-  if (message) {
-    message.channel.send(message);
+  const targetMessage = targetedMessage(message);
+  if (targetMessage) {
+    message.channel.send(targetMessage);
     return;
   }
 });
