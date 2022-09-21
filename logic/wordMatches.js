@@ -23,8 +23,7 @@ export function wordMatches(content) {
 
   if (content.includes("värsåsjönna")) return "VärsåsJönna <3";
   if (content.includes("majk-style"))
-    return `*Se även: lat, soffpotatis, alkoholist*
-  (Uttal IPA: /maɪkstaɪl/) Att hämta två öl istället för en.`;
+    return "*Se även: lat, soffpotatis, alkoholist* \n*(Uttal IPA: /maɪkstaɪl/)* \nHandlingen där datorspelaren hämtar **två** öl istället för **en**.";
   if (content === "spel?") return "Dans!";
   if (content === "dans?") return "Spel!";
 }
