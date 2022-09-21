@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import { Client, GatewayIntentBits } from "discord.js";
 import { gameMatching } from "./game.js";
 import { wordMatching } from "./word.js";
+import { targetedMessage } from "./targeted.js";
 
 dotenv.config();
 
@@ -13,12 +14,6 @@ const matchers = [gameMatching, wordMatching];
 
 client.on("messageCreate", async message => {
   if (message.author.bot) return;
-  console.log(message);
-
-  const directed = message.mentions.users.find(user => user.id === client.user.id);
-  if (directed) {
-    message.channel.send("HELO!");
-  }
 
   const content = message.content.toLowerCase();
   for (const matcher of matchers) {
@@ -27,6 +22,12 @@ client.on("messageCreate", async message => {
       message.channel.send(result);
       return;
     }
+  }
+
+  const message = targetedMessage(message);
+  if (message) {
+    message.channel.send(message);
+    return;
   }
 });
 
