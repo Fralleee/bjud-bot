@@ -22,17 +22,17 @@ Currently the bot matches games or certain words
 
 If the message content contains a certain word or phrase or is excatly equal a certain phrase the bot will respond in turn
 
-| Words                                                                   | Response                  | Exact |
-| ----------------------------------------------------------------------- | ------------------------- | ----- |
-| ["salem", "jönköping"]                                                  | "Näee va tråkigt."        | No    |
-| ["sova", "söva", "ge mig"]                                              | "Klent."                  | No    |
-| ["bjuds det", "om det bjuds", "dåligt med bjud"]                        | "Klart det bjuds"         | No    |
-| ["öl", "kebab", "pizza", "taco"]                                        | "Ååh va gott!"            | No    |
-| ["hallåses", "fel på låset", "fel på låses", "brevinkastet", "låna wc"] | "Håll om mig!"            | No    |
-| värsåsjönna                                                             | "VärsåsJönna <3"          | No    |
-| majk-style                                                              | Description of majk-style | No    |
-| spel?                                                                   | "Dans!"                   | Yes   |
-| dans?                                                                   | "Spel!"                   | Yes   |
+| Words                                                                                     | Response           | Exact |
+| ----------------------------------------------------------------------------------------- | ------------------ | ----- |
+| ["salem", "jönköping"]                                                                    | "Näee va tråkigt." | No    |
+| ["sova", "söva", "ge mig"]                                                                | "Klent."           | No    |
+| ["bjuds det", "om det bjuds", "dåligt med bjud"]                                          | "Klart det bjuds"  | No    |
+| ["öl", "kebab", "pizza", "taco"]                                                          | "Ååh va gott!"     | No    |
+| ["hallåses", "fel på låset", "fel på låses", "brevinkastet", "låna wc"]                   | "Håll om mig!"     | No    |
+| ["majkstyle", "dra en majk", "majk-style", "majk special", "majk-special", "majkspecial"] | Majk special       | No    |
+| värsåsjönna                                                                               | "VärsåsJönna <3"   | No    |
+| spel?                                                                                     | "Dans!"            | Yes   |
+| dans?                                                                                     | "Spel!"            | Yes   |
 
 # Bot mentions
 
