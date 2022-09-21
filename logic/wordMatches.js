@@ -17,6 +17,7 @@ export function wordMatches(content) {
     return "Klent.";
   }
 
+  if (content.includes("värsåsjönna")) return "VärsåsJönna <3";
   if (content === "spel?") return "Dans!";
   if (content === "dans?") return "Spel!";
 }
