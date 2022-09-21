@@ -11,7 +11,7 @@ const responseMap = {
   },
 };
 
-export function gameMatching(content) {
+export function gameActions(content) {
   const action = content[0];
   if (action in responseMap) {
     const actionResponse = responseMap[action];

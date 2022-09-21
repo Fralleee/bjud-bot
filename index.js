@@ -1,9 +1,9 @@
 import dotenv from "dotenv";
 import { Client, GatewayIntentBits } from "discord.js";
-import { gameMatching } from "./game.js";
-import { wordMatching } from "./word.js";
-import { pleaseNoMatching } from "./pleaseno.js";
-import { targetedMessage } from "./targeted.js";
+import { gameActions } from "./logic/gameActions.js";
+import { wordActions } from "./logic/wordActions.js";
+import { wordMatches } from "./logic/wordMatches.js";
+import { botMention } from "./logic/botMentions.js";
 
 dotenv.config();
 
@@ -11,7 +11,7 @@ const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers, GatewayIntentBits.DirectMessages, GatewayIntentBits.MessageContent],
 });
 
-const matchers = [gameMatching, wordMatching, pleaseNoMatching];
+const matchers = [gameActions, wordActions, wordMatches];
 
 client.on("messageCreate", async message => {
   if (message.author.bot) return;
@@ -25,9 +25,9 @@ client.on("messageCreate", async message => {
     }
   }
 
-  const targetMessage = targetedMessage(message, client.user.id);
-  if (targetMessage) {
-    message.channel.send(targetMessage);
+  const botMentionMessage = botMention(message, client.user.id);
+  if (botMentionMessage) {
+    message.channel.send(botMentionMessage);
     return;
   }
 });
