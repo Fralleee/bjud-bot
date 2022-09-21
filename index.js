@@ -25,7 +25,7 @@ client.on("messageCreate", async message => {
     }
   }
 
-  const targetMessage = targetedMessage(message);
+  const targetMessage = targetedMessage(message, client.user.id);
   if (targetMessage) {
     message.channel.send(targetMessage);
     return;
