@@ -1,5 +1,5 @@
 const boring = ["salem", "jönköping"];
-const wussy = ["sova", "ge mig"];
+const wussy = ["sova", "söva", "ge mig"];
 
 export function pleaseNoMatching(content) {
   if (boring.some(val => content.includes(val))) {
