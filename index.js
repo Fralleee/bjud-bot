@@ -15,7 +15,7 @@ client.on("messageCreate", async message => {
   if (message.author.bot) return;
   console.log(message);
 
-  const directed = message.mentions.users.find(user => user === client.user);
+  const directed = message.mentions.users.find(user => user.id === client.user.id);
   if (directed) {
     message.channel.send("HELO!");
   }
