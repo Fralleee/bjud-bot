@@ -9,6 +9,9 @@ export function wordMatches(content) {
   if (bjud.some(val => content.includes(val))) {
     return "Klart det bjuds";
   }
+  if (majkstyle.some(val => content.includes(val))) {
+    return "**Majk special** *[maɪkspɛʃ.əl]*\nHandlingen där datorspelaren hämtar __två__ öl istället för __en__.\n*Se även: lat, soffpotatis, alkoholist*";
+  }
   if (gotta.some(val => content.includes(val))) {
     return "Ååh va gott!";
   }
@@ -20,9 +23,6 @@ export function wordMatches(content) {
   }
   if (gun.some(val => content.includes(val))) {
     return "Håll om mig!";
-  }
-  if (majkstyle.some(val => content.includes(val))) {
-    return "**Majk special** *[maɪkspɛʃ.əl]*\nHandlingen där datorspelaren hämtar __två__ öl istället för __en__.\n*Se även: lat, soffpotatis, alkoholist*";
   }
 
   if (content.includes("värsåsjönna")) return "VärsåsJönna <3";
