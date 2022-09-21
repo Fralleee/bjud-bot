@@ -22,7 +22,7 @@ export function wordMatches(content) {
     return "Håll om mig!";
   }
   if (majkstyle.some(val => content.includes(val))) {
-    return "**Majk special** */maɪkspɛʃ.əl/*\nHandlingen där datorspelaren hämtar __två__ öl istället för __en__.\n*Se även: lat, soffpotatis, alkoholist*";
+    return "**Majk special** *[maɪkspɛʃ.əl]*\nHandlingen där datorspelaren hämtar __två__ öl istället för __en__.\n*Se även: lat, soffpotatis, alkoholist*";
   }
 
   if (content.includes("värsåsjönna")) return "VärsåsJönna <3";
