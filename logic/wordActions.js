@@ -3,7 +3,7 @@ import { randomElement } from "../utils/array.js";
 const responseMap = {
   "!": {
     öl: "Nu får man hämta öl!!!",
-    brifelt: ["Ta inte för givet att din kamrat står vid punkten!", "Kör biiil! Minst 3 på vagnen!", "Basse bosse!"],
+    brifelt: ["> Ta inte för givet att din kamrat står vid punkten!", "> Kör biiil! Minst 3 på vagnen!", "> Basse bosse!"],
   },
   "?": {
     öl: "När får man hämta öl egentligen?",
