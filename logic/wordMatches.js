@@ -41,6 +41,8 @@ export function wordMatches(content) {
     return "Ser rätt brunt ut ja.";
   }
 
+  if (content.includes("öl?")) return "När får man hämta öl egentligen?";
+  if (content.includes("öl!")) return "Nu får man hämta öl!!!";
   if (content.includes("värsåsjönna")) return "VärsåsJönna <3";
   if (content === "spel?") return "Dans!";
   if (content === "dans?") return "Spel!";
