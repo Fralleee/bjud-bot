@@ -1,4 +1,4 @@
-import { randomElement } from "../utils/array";
+import { randomElement } from "./utils/array";
 
 const responseMap = {
   "!": {
