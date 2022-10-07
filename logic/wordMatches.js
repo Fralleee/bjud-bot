@@ -8,6 +8,7 @@ const tack = ["tack", "tock", "takk"];
 const daensk = ["böge", "bestefar", "kuke"];
 const douche = ["easy game", "easy life", "ez game"];
 const brunt = ["brunt ut", "aningen brunt", "mycket brunt", "väldigt brunt"];
+const jordkällare = ["jordkällare", "fritzl", "fritzel", "linder"];
 
 export function wordMatches(content) {
   if (bjud.some(val => content.includes(val))) {
@@ -39,6 +40,9 @@ export function wordMatches(content) {
   }
   if (brunt.some(val => content.includes(val))) {
     return "Ser rätt brunt ut ja.";
+  }
+  if (jordkällare.some(val => content.includes(val))) {
+    return "Micke?";
   }
 
   if (content.includes("öl?")) return "När får man hämta öl egentligen?";
