@@ -1,6 +1,6 @@
-# BjudBot Hey
+# BjudBot
 
-Super simple Discord bot made for fun
+A Super simple Discord bot made for fun
 
 # Action matching
 
