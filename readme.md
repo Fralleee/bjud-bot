@@ -1,4 +1,4 @@
-# BjudBot  sa
+# BjudBot
 
 A Super simple Discord bot made for fun
 
