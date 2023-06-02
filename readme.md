@@ -38,4 +38,4 @@ If the message content contains a certain word or phrase or is excatly equal a c
 
 The bot will respond to mentions with a static: "Mjaa, det är väl sådär på en höft."
 
--
+--
