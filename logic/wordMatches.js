@@ -1,6 +1,6 @@
 import fuzzysort from "fuzzysort";
 
-const keywordMap = new Map([
+export const keywordMap = new Map([
   [["salem", "jönköping"], "Näee va tråkigt."],
   [["sova", "söva", "ge mig"], "Klent."],
   [["bjuds det", "om det bjuds", "dåligt med bjud"], "Klart det bjuds"],
@@ -26,15 +26,6 @@ export function wordMatches(content) {
     }
   }
 
-  for (let [words, response] of keywordMap.entries()) {
-    for (let word of words) {
-      let result = fuzzysort.single(word, content);
-      if (result && result.score > -5000) {
-        return response;
-      }
-    }
-  }
-
   switch (content) {
     case "öl?":
       return "När får man hämta öl egentligen?";
@@ -46,5 +37,14 @@ export function wordMatches(content) {
       return "Dans!";
     case "dans?":
       return "Spel!";
+  }
+
+  for (let [words, response] of keywordMap.entries()) {
+    for (let word of words) {
+      let result = fuzzysort.single(word, content);
+      if (result && result.score > -5000) {
+        return response;
+      }
+    }
   }
 }
