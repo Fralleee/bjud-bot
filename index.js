@@ -10,7 +10,7 @@ const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers, GatewayIntentBits.DirectMessages, GatewayIntentBits.MessageContent],
 });
 
-const matchers = [gameActions, wordActions, wordMatches];
+const matchers = [gameActions, wordMatches];
 
 client.on("messageCreate", async message => {
   if (message.author.bot) return;
