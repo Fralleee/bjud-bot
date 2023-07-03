@@ -10,7 +10,7 @@ describe("wordMatches", () => {
   })
 
   test.each<[string, string | undefined]>([
-    ["/tagga game", "Woooh! Let's play game!"],
+    ["/tagga game", "Woooh! @everyone! Let's play game!"],
     ["/tagga", undefined],
     ["öl?", "När får man hämta öl egentligen?"],
     ["öl!", "Nu får man hämta öl!!!"],
