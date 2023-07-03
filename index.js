@@ -1,7 +1,6 @@
 import dotenv from "dotenv";
 import { Client, GatewayIntentBits } from "discord.js";
 import { gameActions } from "./logic/gameActions.js";
-import { wordActions } from "./logic/wordActions.js";
 import { wordMatches } from "./logic/wordMatches.js";
 import { botMention } from "./logic/botMentions.js";
 
