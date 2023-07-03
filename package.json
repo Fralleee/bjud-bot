@@ -7,10 +7,11 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "dependencies": {
     "discord.js": "^14.3.0",
-    "dotenv": "^16.0.2"
+    "dotenv": "^16.0.2",
+    "fuzzysort": "^2.0.4"
   }
 }
