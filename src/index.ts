@@ -42,4 +42,16 @@ client.on("ready", () => {
   console.log(`Logged in as ${client?.user?.tag}!`)
 })
 
+client.on("disconnect", (event) => {
+  console.log(`Disconnected with code ${event.code}.`);
+})
+
+client.on("reconnecting", () => {
+  console.log("Reconnecting...");
+})
+
+client.on("error", (error) => {
+  console.error("An error occurred:", error);
+})
+
 client.login(process.env.DISCORD_TOKEN)
