@@ -10,6 +10,10 @@ export const keywordMap = new Map<string[], string>([
     ["majkstyle", "dra en majk", "majk-style", "majk special", "majk-special", "majkspecial"],
     "**Majk special** *[maɪkspɛʃ.əl]*\nHandlingen där datorspelaren hämtar __två__ öl istället för __en__.\n*Se även: lat, soffpotatis, alkoholist*"
   ],
+  [
+    ["emilstyle", "dra en emil", "emil-style", "emil special", "emil-special", "emilspecial"],
+    "**Emil special** *[emɪlspɛʃ.əl]*\nHandlingen där datorspelaren hämtar __en__ öl istället för __två__. \nOch sedan gnäller om 'när får man hämta öl?'.\n*Se även: kortsiktig, oförberedd, fånig*"
+  ],
   [["tack", "tock", "takk"], "Naj naj naj, RU sa ha tack!"],
   [["böge", "bestefar", "kuke"], "Jæ meget godt!"],
   [["easy game", "easy life", "ez game"], "Och en glädjelig jul till er alla!"],
