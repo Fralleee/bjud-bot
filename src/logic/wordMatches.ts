@@ -1,4 +1,4 @@
-import fuzzysort from "fuzzysort"
+import Fuse from "fuse.js"
 
 export const keywordMap = new Map<string[], string>([
   [["salem", "jönköping"], "Näee va tråkigt."],
@@ -17,6 +17,15 @@ export const keywordMap = new Map<string[], string>([
   [["jordkällare", "fritzl", "fritzel", "linder"], "Micke?"],
   [["brifelt", "linus"], "Ta inte för givet att din kamrat står vid punkten!"]
 ])
+
+const options = {
+  includeScore: true,
+  threshold: 0.5,
+  keys: ["word"]
+}
+
+const wordsList = [...keywordMap.keys()].flatMap(k => k.map(word => ({ word })))
+const fuse = new Fuse(wordsList, options)
 
 export function wordMatches(content: string): string | undefined {
   if (content.startsWith("/tagga")) {
@@ -39,12 +48,11 @@ export function wordMatches(content: string): string | undefined {
       return "Spel!"
   }
 
-  for (const [words, response] of keywordMap.entries()) {
-    for (const word of words) {
-      const result = fuzzysort.single(word, content)
-      if (result && result.score > -5000) {
-        return response
-      }
+  const result = fuse.search(content)
+  if (result.length && result[0].score && result[0].score <= options.threshold) {
+    const matchedKey = [...keywordMap.keys()].find(keyArray => keyArray.includes(result[0].item.word))
+    if (matchedKey) {
+      return keywordMap.get(matchedKey)
     }
   }
 }
